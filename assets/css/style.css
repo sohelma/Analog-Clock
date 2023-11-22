@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box; /* Border-box: padding use korle box boro hoi. Atake control kore. */
+    scroll-behavior: smooth;     /* about page a click korle smoothly scroll hobe. suddenly na*/
+}
+h1,h2,h3,h4,h5,h6{font-family: 'Oswald', sans-serif;}
+/*------headline a oswald use so h ke dia upore only open sens p are jonn raklam------*/
+
+body{
+height: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.clock{background:url(../img/c2.webp)  ;
+background-size: cover;
+width:300px;
+height: 300px;
+border-radius: 50%;
+/* border: 7px double rebeccapurple; */
+box-shadow: blue 0px 5px 19px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.clock::before{content:'';width:  15px;height: 15px;
+    position: absolute;
+    border-radius: 50%;z-index: 10;
+    border: 9px solid red;
+    }
+.hr,.mn,.sc{display: flex;justify-content: center;border-radius: 50%;
+position: absolute;
+}
+.hr::before{content:'';
+width: 6px;height: 70px;background: gray;position: absolute;
+border-radius: 50%;z-index: 1;
+}
+.mn::before{content:'';
+width: 4px;height: 90px;background: gray;position: absolute;
+border-radius: 50%;z-index: 2;
+}
+.sc::before{content:'';
+width: 1px;height: 114px;background: rgb(250, 23, 23);position: absolute;
+border-radius: 6px 6px 0 0;z-index: 3;
+}

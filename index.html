@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock-Analog</title>
+    <!------fontawesome------>
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <!-------bootstrap------>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-------style main css------->              
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div class="clock">
+
+        <div class="hour">
+            <div id="hr" class="hr">
+            </div>
+        </div>  
+        <div class="minute">
+            <div id="mn" class="mn">
+            </div>
+        </div>  
+        <div class="sec">
+            <div id="sc" class="sc">
+            </div>
+        </div>  
+  </div>
+
+
+
+<!-------------js-link-(javaScript)------------------->
+<!-- <script src="./assets/js/bootstrap.bundle.min.js"></script> -->
+<script>
+const deg = 6;
+const hr = document.querySelector("#hr");
+const mn = document.querySelector("#mn");
+const sc = document.querySelector("#sc");
+setInterval(() =>{
+    let day = new Date();
+    let hh = day.getHours() * 30;
+    let mm = day.getMinutes() * deg;
+    let ss = day.getSeconds() * deg;
+    hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+    mn.style.transform = `rotateZ(${mm}deg)`;
+    sc.style.transform = `rotateZ(${ss}deg)`;
+})
+
+</script>
+</body>                  
+</html>
